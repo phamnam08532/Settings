@@ -127,7 +127,7 @@
         <!-- Hệ thống -->
         <div id="system" class="col s12">
             <h2>Cập Nhật Hệ Thống</h2>
-            <p>Phiên bản hiện tại: 16</p>
+            <p>Phiên bản hiện tại: 1.0.0</p>
             <button class="btn waves-effect waves-light" onclick="checkUpdate()">Kiểm Tra Cập Nhật</button>
         </div>
 
@@ -161,6 +161,12 @@
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        // Mở các tab khi trang load
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(elems);
+        });
+
         // JavaScript để xử lý các sự kiện
         function saveSettings() {
             alert("Cài đặt đã được lưu!");
@@ -175,4 +181,4 @@
         }
     </script>
 </body>
-    </html>
+                    </html>
