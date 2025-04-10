@@ -1,14 +1,16 @@
 /* Thiết lập màu nền chính và các màu sắc theo phong cách Material You */
 :root {
-    --primary-color: #6200ea; /* Màu chủ đạo, có thể thay đổi tùy theo màu hệ thống */
+    --primary-color: #6200ea; /* Màu chủ đạo */
     --primary-light: #bb86fc; /* Màu sáng của màu chủ đạo */
     --primary-dark: #3700b3; /* Màu tối của màu chủ đạo */
-    --background-color: #f5f5f5; /* Màu nền của trang */
+    --background-color: #fafafa; /* Màu nền sáng */
     --card-background: #ffffff; /* Màu nền của các mục cài đặt */
     --text-color: #212121; /* Màu chữ chính */
     --secondary-text: #757575; /* Màu chữ phụ */
     --switch-color: #03dac5; /* Màu cho công tắc (switch) */
     --divider-color: #e0e0e0; /* Màu cho đường phân cách */
+    --highlight-color: #03a9f4; /* Màu nổi bật cho các yếu tố quan trọng */
+    --btn-hover-color: #3700b3; /* Màu nền nút khi hover */
 }
 
 /* Cài đặt chung */
@@ -23,32 +25,45 @@ body {
 /* Tiêu đề */
 header h1 {
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
 }
 
 /* Các tab (chuyển đổi giữa các mục) */
 .tabs {
     background-color: var(--card-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .tabs .tab a {
     color: var(--primary-dark);
     font-weight: bold;
+    padding: 14px 16px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    border-radius: 8px;
 }
 
 .tabs .tab a:hover {
-    color: var(--primary-light);
+    color: var(--highlight-color);
+}
+
+.tabs .tab a.active {
+    background-color: var(--primary-light);
+    color: white;
 }
 
 /* Nội dung của các tab */
 .col.s12 {
-    padding: 20px;
+    padding: 30px;
     background-color: var(--card-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 /* Các mục cài đặt */
@@ -56,8 +71,14 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--divider-color);
+    transition: background-color 0.3s ease;
+}
+
+.setting-item:hover {
+    background-color: var(--primary-light);
+    cursor: pointer;
 }
 
 .setting-item:last-child {
@@ -65,20 +86,27 @@ header h1 {
 }
 
 .setting-item label {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--secondary-text);
+    font-weight: 500;
 }
 
 .setting-item input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
-    height: 4px;
+    height: 6px;
     background: var(--divider-color);
-    border-radius: 2px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .setting-item input[type="range"]:focus {
     outline: none;
+    background-color: var(--highlight-color);
+}
+
+.setting-item input[type="range"]:hover {
+    background-color: var(--highlight-color);
 }
 
 .setting-item .switch input[type="checkbox"] {
@@ -97,26 +125,29 @@ footer {
 button.btn {
     background-color: var(--primary-color);
     color: white;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    padding: 14px 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button.btn:hover {
-    background-color: var(--primary-dark);
-}
-
-/* Các hiệu ứng hover cho các mục */
-.setting-item:hover {
-    background-color: var(--primary-light);
-    cursor: pointer;
+    background-color: var(--btn-hover-color);
+    transform: translateY(-2px);
 }
 
 /* Giới thiệu phần cuối */
 footer p {
     color: var(--secondary-text);
     font-size: 0.9rem;
-    }
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Hiệu ứng hover cho các mục */
+.setting-item:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+        }
