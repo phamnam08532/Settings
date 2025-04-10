@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cài Đặt</title>
-    <!-- Liên kết Materialize CSS từ CDN -->
+    <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Liên kết đến CSS của bạn -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,64 +14,78 @@
             <h1>Cài Đặt</h1>
         </header>
 
-        <!-- Tab navigation -->
         <nav>
             <ul class="tabs">
                 <li class="tab col s3"><a href="#network">Mạng</a></li>
                 <li class="tab col s3"><a href="#display">Màn Hình</a></li>
                 <li class="tab col s3"><a href="#sound">Âm Thanh</a></li>
                 <li class="tab col s3"><a href="#storage">Dung Lượng</a></li>
-                <li class="tab col s3"><a href="#accessibility">Hỗ Trợ</a></li>
-                <li class="tab col s3"><a href="#account">Tài Khoản</a></li>
-                <li class="tab col s3"><a href="#system">Hệ Thống</a></li>
                 <li class="tab col s3"><a href="#security">Bảo Mật</a></li>
-                <li class="tab col s3"><a href="#about">Giới Thiệu</a></li>
+                <li class="tab col s3"><a href="#account">Tài Khoản</a></li>
             </ul>
         </nav>
 
-        <!-- Network settings -->
         <div id="network" class="col s12">
-            <div class="setting-item">
-                <label for="wifi">Wi-Fi</label>
-                <div class="switch">
-                    <label>
-                        Tắt
-                        <input type="checkbox" id="wifi">
-                        <span class="lever"></span>
-                        Bật
-                    </label>
-                </div>
+            <h5>Wi-Fi</h5>
+            <div class="switch">
+                <label>
+                    Off
+                    <input type="checkbox" id="wifi">
+                    <span class="lever"></span>
+                    On
+                </label>
             </div>
-            <div class="setting-item">
-                <label for="data">Dữ Liệu Di Động</label>
-                <div class="switch">
-                    <label>
-                        Tắt
-                        <input type="checkbox" id="data">
-                        <span class="lever"></span>
-                        Bật
-                    </label>
-                </div>
+
+            <h5>Dữ Liệu Di Động</h5>
+            <div class="switch">
+                <label>
+                    Off
+                    <input type="checkbox" id="data">
+                    <span class="lever"></span>
+                    On
+                </label>
             </div>
         </div>
 
-        <!-- Display settings -->
         <div id="display" class="col s12">
-            <h2>Độ Sáng</h2>
-            <div class="setting-item">
-                <input type="range" id="brightness" min="0" max="100" value="50">
+            <h5>Độ Sáng</h5>
+            <input type="range" id="brightness" min="0" max="100" value="50">
+        </div>
+
+        <div id="sound" class="col s12">
+            <h5>Âm Lượng</h5>
+            <input type="range" id="volume" min="0" max="100" value="70">
+        </div>
+
+        <div id="storage" class="col s12">
+            <h5>Dung Lượng Bộ Nhớ</h5>
+            <p>Đã sử dụng: 10 GB / 64 GB</p>
+        </div>
+
+        <div id="security" class="col s12">
+            <h5>Mã Pin</h5>
+            <div class="switch">
+                <label>
+                    Off
+                    <input type="checkbox" id="pin">
+                    <span class="lever"></span>
+                    On
+                </label>
             </div>
         </div>
 
-        <!-- Footer -->
+        <div id="account" class="col s12">
+            <h5>Tài Khoản Google</h5>
+            <button class="btn">Đăng Nhập</button>
+        </div>
+
         <footer class="center-align">
             <button class="btn waves-effect waves-light">Lưu Cài Đặt</button>
         </footer>
     </div>
 
-    <!-- Liên kết Materialize JS -->
+    <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Liên kết script.js của bạn -->
     <script src="script.js"></script>
 </body>
-            </html>
+    </html>
