@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-settings">
+        <header>
+            <h1>App Settings</h1>
+        </header>
+
+        <nav class="settings-nav">
+            <ul>
+                <li><a href="#network">Network & Internet</a></li>
+                <li><a href="#display">Display</a></li>
+                <li><a href="#sound">Sound</a></li>
+                <li><a href="#storage">Storage</a></li>
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+
+        <section id="network">
+            <h2>Network & Internet</h2>
+            <div class="setting-item">
+                <label for="wifi">Wi-Fi</label>
+                <input type="checkbox" id="wifi">
+            </div>
+            <div class="setting-item">
+                <label for="data">Mobile Data</label>
+                <input type="checkbox" id="data">
+            </div>
+        </section>
+
+        <section id="display">
+            <h2>Display</h2>
+            <div class="setting-item">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" min="0" max="100" value="50">
+            </div>
+        </section>
+
+        <footer>
+            <button class="save-btn">Save Settings</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

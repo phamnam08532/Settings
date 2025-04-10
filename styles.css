@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.app-settings {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.settings-nav ul {
+    list-style: none;
+}
+
+.settings-nav li {
+    margin: 10px 0;
+}
+
+.settings-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+}
+
+section {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.setting-item label {
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="range"] {
+    width: 100px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
