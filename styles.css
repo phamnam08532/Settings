@@ -1,19 +1,18 @@
-/* Thiết lập màu nền chính và các màu sắc theo phong cách Material You */
+/* Thêm các biến màu sắc Material You */
 :root {
-    --primary-color: #6200ea; /* Màu chủ đạo */
-    --primary-light: #bb86fc; /* Màu sáng của màu chủ đạo */
-    --primary-dark: #3700b3; /* Màu tối của màu chủ đạo */
-    --background-color: #fafafa; /* Màu nền sáng */
-    --card-background: #ffffff; /* Màu nền của các mục cài đặt */
-    --text-color: #212121; /* Màu chữ chính */
-    --secondary-text: #757575; /* Màu chữ phụ */
-    --switch-color: #03dac5; /* Màu cho công tắc (switch) */
-    --divider-color: #e0e0e0; /* Màu cho đường phân cách */
-    --highlight-color: #03a9f4; /* Màu nổi bật cho các yếu tố quan trọng */
-    --btn-hover-color: #3700b3; /* Màu nền nút khi hover */
+    --primary-color: #6200ea;
+    --primary-light: #bb86fc;
+    --primary-dark: #3700b3;
+    --background-color: #fafafa;
+    --card-background: #ffffff;
+    --text-color: #212121;
+    --secondary-text: #757575;
+    --switch-color: #03dac5;
+    --divider-color: #e0e0e0;
+    --highlight-color: #03a9f4;
+    --btn-hover-color: #3700b3;
 }
 
-/* Cài đặt chung */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -22,7 +21,6 @@ body {
     padding: 0;
 }
 
-/* Tiêu đề */
 header h1 {
     color: var(--primary-color);
     font-size: 2.8rem;
@@ -31,42 +29,37 @@ header h1 {
     font-weight: 600;
 }
 
-/* Các tab (chuyển đổi giữa các mục) */
-.tabs {
+nav .tabs {
     background-color: var(--card-background);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-.tabs .tab a {
+nav .tabs .tab a {
     color: var(--primary-dark);
     font-weight: bold;
-    padding: 14px 16px;
+    padding: 14px;
     font-size: 1.1rem;
     transition: color 0.3s ease;
     border-radius: 8px;
 }
 
-.tabs .tab a:hover {
+nav .tabs .tab a:hover {
     color: var(--highlight-color);
 }
 
-.tabs .tab a.active {
+nav .tabs .tab a.active {
     background-color: var(--primary-light);
     color: white;
 }
 
-/* Nội dung của các tab */
 .col.s12 {
-    padding: 30px;
+    padding: 20px;
     background-color: var(--card-background);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     border-radius: 10px;
-    transition: all 0.3s ease;
 }
 
-/* Các mục cài đặt */
 .setting-item {
     display: flex;
     justify-content: space-between;
@@ -81,14 +74,9 @@ header h1 {
     cursor: pointer;
 }
 
-.setting-item:last-child {
-    border-bottom: none;
-}
-
 .setting-item label {
     font-size: 1.2rem;
     color: var(--secondary-text);
-    font-weight: 500;
 }
 
 .setting-item input[type="range"] {
@@ -109,20 +97,11 @@ header h1 {
     background-color: var(--highlight-color);
 }
 
-.setting-item .switch input[type="checkbox"] {
-    background-color: var(--primary-light);
-}
-
 .switch .lever {
     background-color: var(--switch-color);
 }
 
-/* Nút lưu cài đặt */
-footer {
-    margin-top: 30px;
-}
-
-button.btn {
+footer button {
     background-color: var(--primary-color);
     color: white;
     font-size: 1.2rem;
@@ -133,21 +112,14 @@ button.btn {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-button.btn:hover {
+footer button:hover {
     background-color: var(--btn-hover-color);
     transform: translateY(-2px);
 }
 
-/* Giới thiệu phần cuối */
 footer p {
     color: var(--secondary-text);
     font-size: 0.9rem;
     text-align: center;
     margin-top: 20px;
-}
-
-/* Hiệu ứng hover cho các mục */
-.setting-item:hover {
-    background-color: var(--highlight-color);
-    cursor: pointer;
-        }
+    }
