@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Cài Đặt</title>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -21,13 +21,14 @@
                 <li class="tab col s3"><a href="#sound">Âm thanh</a></li>
                 <li class="tab col s3"><a href="#storage">Dung lượng</a></li>
                 <li class="tab col s3"><a href="#accessibility">Hỗ trợ</a></li>
-                <li class="tab col s3"><a href="#account"></a>Tài Khoản</li>
+                <li class="tab col s3"><a href="#account">Tài Khoản</a></li>
                 <li class="tab col s3"><a href="#system">Hệ thống</a></li>
                 <li class="tab col s3"><a href="#security">Bảo Mật</a></li>
                 <li class="tab col s3"><a href="#about">Giới thiệu</a></li>
             </ul>
         </nav>
 
+        <!-- Mạng & Kết Nối -->
         <div id="network" class="col s12">
             <div class="setting-item">
                 <label for="wifi">Wi-Fi</label>
@@ -53,15 +54,107 @@
             </div>
         </div>
 
+        <!-- Màn hình -->
         <div id="display" class="col s12">
             <h2>Độ Sáng</h2>
             <div class="setting-item">
                 <input type="range" id="brightness" min="0" max="100" value="50">
             </div>
+            <div class="setting-item">
+                <label for="night_mode">Chế Độ Ban Đêm</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="night_mode">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Âm thanh -->
+        <div id="sound" class="col s12">
+            <h2>Âm Lượng</h2>
+            <div class="setting-item">
+                <input type="range" id="volume" min="0" max="100" value="50">
+            </div>
+            <div class="setting-item">
+                <label for="vibrate">Chế Độ Rung</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="vibrate">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dung lượng -->
+        <div id="storage" class="col s12">
+            <h2>Quản Lý Dung Lượng</h2>
+            <p>Dung lượng sử dụng: <strong>40 GB</strong> / 128 GB</p>
+            <div class="setting-item">
+                <button class="btn waves-effect waves-light">Dọn Dẹp</button>
+            </div>
+        </div>
+
+        <!-- Hỗ trợ -->
+        <div id="accessibility" class="col s12">
+            <h2>Cài Đặt Hỗ Trợ</h2>
+            <div class="setting-item">
+                <label for="screen_reader">Đọc Màn Hình</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="screen_reader">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tài Khoản -->
+        <div id="account" class="col s12">
+            <h2>Thông Tin Tài Khoản</h2>
+            <p><strong>Email:</strong> user@example.com</p>
+            <p><strong>Đăng xuất</strong></p>
+        </div>
+
+        <!-- Hệ thống -->
+        <div id="system" class="col s12">
+            <h2>Cập Nhật Hệ Thống</h2>
+            <p>Phiên bản hiện tại: 1.0.0</p>
+            <button class="btn waves-effect waves-light">Kiểm Tra Cập Nhật</button>
+        </div>
+
+        <!-- Bảo Mật -->
+        <div id="security" class="col s12">
+            <h2>Bảo Mật</h2>
+            <div class="setting-item">
+                <label for="lock_screen">Mở Khóa Màn Hình</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="lock_screen">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giới thiệu -->
+        <div id="about" class="col s12">
+            <h2>Giới Thiệu</h2>
+            <p>Ứng dụng Cài Đặt phiên bản 1.0.0.</p>
         </div>
 
         <footer class="center-align">
-            <button class="btn waves-effect waves-light">Save Settings</button>
+            <button class="btn waves-effect waves-light">Lưu Cài Đặt</button>
         </footer>
     </div>
 
@@ -69,4 +162,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
+                </html>
