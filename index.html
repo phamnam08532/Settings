@@ -1,54 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Settings</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-settings">
-        <header>
+    <div class="container">
+        <header class="center-align">
             <h1>App Settings</h1>
         </header>
 
-        <nav class="settings-nav">
-            <ul>
-                <li><a href="#network">Network & Internet</a></li>
-                <li><a href="#display">Display</a></li>
-                <li><a href="#sound">Sound</a></li>
-                <li><a href="#storage">Storage</a></li>
-                <li><a href="#apps">Apps</a></li>
-                <li><a href="#privacy">Privacy</a></li>
-                <li><a href="#about">About</a></li>
+        <nav>
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#network">Mạng & Kết Nối</a></li>
+                <li class="tab col s3"><a href="#display">Màn hình</a></li>
+                <li class="tab col s3"><a href="#sound">Âm thanh</a></li>
+                <li class="tab col s3"><a href="#storage">Dung lượng</a></li>
+                <li class="tab col s3"><a href="#accessibility">Hỗ trợ</a></li>
+                <li class="tab col s3"><a href="#account"></a>Tài Khoản</li>
+                <li class="tab col s3"><a href="#system">Hệ thống</a></li>
+                <li class="tab col s3"><a href="#security">Bảo Mật</a></li>
+                <li class="tab col s3"><a href="#about">Giới thiệu</a></li>
             </ul>
         </nav>
 
-        <section id="network">
-            <h2>Network & Internet</h2>
+        <div id="network" class="col s12">
             <div class="setting-item">
                 <label for="wifi">Wi-Fi</label>
-                <input type="checkbox" id="wifi">
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="wifi">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
             </div>
             <div class="setting-item">
-                <label for="data">Mobile Data</label>
-                <input type="checkbox" id="data">
+                <label for="data">Dữ Liệu Di Động</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox" id="data">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section id="display">
-            <h2>Display</h2>
+        <div id="display" class="col s12">
+            <h2>Độ Sáng</h2>
             <div class="setting-item">
-                <label for="brightness">Brightness</label>
                 <input type="range" id="brightness" min="0" max="100" value="50">
             </div>
-        </section>
+        </div>
 
-        <footer>
-            <button class="save-btn">Save Settings</button>
+        <footer class="center-align">
+            <button class="btn waves-effect waves-light">Save Settings</button>
         </footer>
     </div>
 
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
